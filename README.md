@@ -1,68 +1,65 @@
-# Othello Game (Reversi) — Pygame Edition
+# Othello Game
 
-A classic implementation of the Othello board game using **Pygame**, featuring:
+A Python implementation of the classic Othello (Reversi) board game with both single-player and two-player modes.
 
-- Player vs. Player mode  
-- Player vs. AI mode with difficulty levels  
-- Interactive GUI with menus and animations
+## Features
 
----
+- Play against AI with three difficulty levels:
+  - Easy: Makes random moves occasionally
+  - Medium: Balanced AI with occasional mistakes
+  - Hard: Strategic AI that always chooses the best move
+- Play against a friend in two-player mode
+- Real-time score tracking
+- Valid move indicators
+- Clear winner announcement
+- Modern user interface
 
-## Getting Started
+## Requirements
 
-Clone this repository and run the game:
+- Python 3.x
+- Pygame
 
-```bash
-git clone https://github.com/Abdelkareem111/othello-game.git
-cd othello-game
-python main.py
-```
+## Installation
 
-Make sure you have [Pygame](https://www.pygame.org/news) installed:
-
+1. Make sure you have Python installed on your system
+2. Install Pygame using pip:
 ```bash
 pip install pygame
 ```
 
----
-
 ## How to Play
 
-The game follows the standard **Othello rules**:
+1. Run the game:
+```bash
+python main.py
+```
 
-- Players take turns placing pieces on the board.
-- You must place your piece so that it **brackets** one or more of the opponent's pieces in any direction (horizontal, vertical, or diagonal).
-- Bracketed opponent pieces are **flipped to your color**.
-- The game ends when **no valid moves** remain for either player.
-- **Black always goes first**.
+2. Choose your game mode:
+   - vs Computer: Play against the AI
+   - vs Friend: Play with another person
 
----
+3. If you choose vs Computer, select difficulty:
+   - Easy: Good for beginners
+   - Medium: Balanced challenge
+   - Hard: Strategic and challenging
+
+4. Game Rules:
+   - Black moves first
+   - Click on valid positions (marked with gray dots)
+   - Pieces are flipped when trapped between two opponent pieces
+   - Game ends when no valid moves remain
+   - Player with the most pieces wins
 
 ## Controls
 
-- 🖱️ **Mouse Click**: Place your piece  
-- 🖱️ **Mouse Hover**: Highlight buttons in menus  
-- 🖱️ **Click on Winner Screen**: Return to main menu
+- Mouse click: Make a move
+- Click anywhere after game over to return to menu
+- Close window to quit game
 
----
+## File Structure
 
-## Code Structure
-
-- `OthelloGame`: Core game logic (board state, valid move checks, AI decisions).
-- `Button`: Handles clickable UI buttons and menu interactions.
-- `draw_*` functions: Render game board, menus, scores, and end screens.
-- `main.py`: Entry point that connects all components.
-
----
-
-## Contributing
-
-Contributions and suggestions are welcome!  
-Feel free to **fork the repo** and submit a **pull request** with improvements, features, or bug fixes.
-
----
-
-## License
-
-This project is licensed under the **MIT License** — free to use and modify.
-```
+- `main.py`: Main game loop and control flow
+- `game.py`: Game logic and AI implementation
+- `display.py`: All display and rendering functions
+- `button.py`: Button class for menu interface
+- `constants.py`: Game constants and configuration
